@@ -24,7 +24,6 @@ Kanagram's KNewStuff download service.
 %files
 %_kde_bindir/kanagram
 %_kde_appsdir/kanagram
-%_kde_iconsdir/*/*/apps/kanagram.*
 %_kde_datadir/applications/kde4/kanagram.desktop
 %_kde_datadir/config.kcfg/kanagram.kcfg
 %_kde_datadir/config/kanagram.knsrc
