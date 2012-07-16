@@ -28,6 +28,10 @@ Kanagram's KNewStuff download service.
 %_kde_datadir/applications/kde4/kanagram.desktop
 %_kde_datadir/config.kcfg/kanagram.kcfg
 %_kde_datadir/config/kanagram.knsrc
+%_kde_libdir/libkanagramengine.*
+%_iconsdir/*/*/apps/kanagram*
+%_kde_includedir/kanagram
+
 %doc ChangeLog TODO COPYING COPYING.DOC
 %doc %_kde_docdir/HTML/en/kanagram
 
