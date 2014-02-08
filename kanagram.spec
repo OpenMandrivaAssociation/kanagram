@@ -1,7 +1,7 @@
 Name:		kanagram
 Summary:	Word learning program
 Version:	4.12.1
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2 GFDL
 URL:		http://edu.kde.org/kanagram
