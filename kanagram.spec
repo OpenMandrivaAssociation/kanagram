@@ -1,14 +1,16 @@
-Name:		kanagram
 Summary:	Word learning program
+Name:		kanagram
 Version:	4.14.1
 Release:	1
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 GFDL
-URL:		http://edu.kde.org/kanagram
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/kanagram
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
 Requires:	libkdeedu = %{version}
+Obsoletes:	%{_lib}kanagramengine4 < 4.14
+Obsoletes:	kanagram-devel < 4.14
 
 %description
 Kanagram is a replacement for KMessedWords. Kanagram mixes up the letters
@@ -28,37 +30,6 @@ Kanagram's KNewStuff download service.
 %{_kde_datadir}/config.kcfg/kanagram.kcfg
 %{_kde_configdir}/kanagram.knsrc
 
-#----------------------------------------------------------------------------
-
-%define kanagramengine_major 4
-%define libkanagramengine %mklibname kanagramengine %{kanagramengine_major}
-
-%package -n %{libkanagramengine}
-Summary:	Runtime library for KDE Education Application
-Group:		System/Libraries
-
-%description -n %{libkanagramengine}
-Runtime library for KDE Education Application.
-
-%files -n %{libkanagramengine}
-%{_kde_libdir}/libkanagramengine.so.%{kanagramengine_major}*
-
-#-----------------------------------------------------------------------------
-
-%package devel
-Summary:	Devel stuff for %{name}
-Group:		Development/KDE and Qt
-Requires:	%{libkanagramengine} = %{version}-%{release}
-Requires:	kdelibs4-devel
-Requires:	libkdeedu-devel
-
-%description devel
-Files needed to build applications based on %{name}.
-
-%files devel
-%{_kde_libdir}/libkanagramengine.so
-%{_includedir}/%{name}
-
 #----------------------------------------------------------------------
 
 %prep
@@ -74,6 +45,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Drop shared library and devel package because kanagram is QML now
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
