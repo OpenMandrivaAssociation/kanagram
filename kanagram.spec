@@ -23,12 +23,14 @@ Kanagram's KNewStuff download service.
 %files
 %doc ChangeLog TODO COPYING COPYING.DOC
 %doc %{_kde_docdir}/HTML/en/kanagram
-%{_kde_bindir}/kanagram
-%{_kde_appsdir}/kanagram
-%{_kde_iconsdir}/*/*/apps/kanagram*
 %{_kde_applicationsdir}/kanagram.desktop
-%{_kde_datadir}/config.kcfg/kanagram.kcfg
+%{_kde_appsdir}/kanagram
+%{_kde_appsdir}/plasma/packages/org.kde.kanagram
+%{_kde_bindir}/kanagram
 %{_kde_configdir}/kanagram.knsrc
+%{_kde_datadir}/appdata/kanagram.appdata.xml
+%{_kde_datadir}/config.kcfg/kanagram.kcfg
+%{_kde_iconsdir}/*/*/apps/kanagram*
 
 #----------------------------------------------------------------------
 
@@ -46,6 +48,7 @@ Kanagram's KNewStuff download service.
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
 - Drop shared library and devel package because kanagram is QML now
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
