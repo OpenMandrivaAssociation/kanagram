@@ -1,14 +1,16 @@
-Name:		kanagram
 Summary:	Word learning program
-Version:	4.13.3
-Release:	1
+Name:		kanagram
+Version:	4.14.3
+Release:	2
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 GFDL
-URL:		http://edu.kde.org/kanagram
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/kanagram
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
 Requires:	libkdeedu = %{version}
+Obsoletes:	%{_lib}kanagramengine4 < 4.14
+Obsoletes:	kanagram-devel < 4.14
 
 %description
 Kanagram is a replacement for KMessedWords. Kanagram mixes up the letters
@@ -21,43 +23,14 @@ Kanagram's KNewStuff download service.
 %files
 %doc ChangeLog TODO COPYING COPYING.DOC
 %doc %{_kde_docdir}/HTML/en/kanagram
-%{_kde_bindir}/kanagram
-%{_kde_appsdir}/kanagram
-%{_kde_iconsdir}/*/*/apps/kanagram*
 %{_kde_applicationsdir}/kanagram.desktop
-%{_kde_datadir}/config.kcfg/kanagram.kcfg
+%{_kde_appsdir}/kanagram
+%{_kde_appsdir}/plasma/packages/org.kde.kanagram
+%{_kde_bindir}/kanagram
 %{_kde_configdir}/kanagram.knsrc
-
-#----------------------------------------------------------------------------
-
-%define kanagramengine_major 4
-%define libkanagramengine %mklibname kanagramengine %{kanagramengine_major}
-
-%package -n %{libkanagramengine}
-Summary:	Runtime library for KDE Education Application
-Group:		System/Libraries
-
-%description -n %{libkanagramengine}
-Runtime library for KDE Education Application.
-
-%files -n %{libkanagramengine}
-%{_kde_libdir}/libkanagramengine.so.%{kanagramengine_major}*
-
-#-----------------------------------------------------------------------------
-
-%package devel
-Summary:	Devel stuff for %{name}
-Group:		Development/KDE and Qt
-Requires:	%{libkanagramengine} = %{version}-%{release}
-Requires:	kdelibs4-devel
-Requires:	libkdeedu-devel
-
-%description devel
-Files needed to build applications based on %{name}.
-
-%files devel
-%{_kde_libdir}/libkanagramengine.so
-%{_includedir}/%{name}
+%{_kde_datadir}/appdata/kanagram.appdata.xml
+%{_kde_datadir}/config.kcfg/kanagram.kcfg
+%{_kde_iconsdir}/*/*/apps/kanagram*
 
 #----------------------------------------------------------------------
 
@@ -72,6 +45,17 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
+- New version 4.14.3
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+- Drop shared library and devel package because kanagram is QML now
+- Update files
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
