@@ -1,14 +1,23 @@
 Summary:	Word learning program
 Name:		kanagram
-Version:	4.14.3
-Release:	2
+Version:	14.12.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kanagram
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
-BuildRequires:	libkdeedu-devel >= %{version}
-Requires:	libkdeedu = %{version}
+BuildRequires:  cmake(KF5DocTools)
+BuildRequires:  cmake(KF5KIO)
+BuildRequires:  cmake(KF5ConfigWidgets)
+BuildRequires:  cmake(KF5I18n)
+BuildRequires:	cmake(KF5Sonnet)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5Declarative)
+BuildRequires:	cmake(KF5NewStuff)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(Phonon4Qt5)
+BuildRequires:	cmake(LibKdeEdu)
+BuildRequires:	cmake(LibKEduVocDocument)
 Obsoletes:	%{_lib}kanagramengine4 < 4.14
 Obsoletes:	kanagram-devel < 4.14
 
@@ -23,11 +32,10 @@ Kanagram's KNewStuff download service.
 %files
 %doc ChangeLog TODO COPYING COPYING.DOC
 %doc %{_kde_docdir}/HTML/en/kanagram
-%{_kde_applicationsdir}/kanagram.desktop
-%{_kde_appsdir}/kanagram
-%{_kde_appsdir}/plasma/packages/org.kde.kanagram
+%{_datadir}/applications/kanagram.desktop
+%{_datadir}/kanagram
 %{_kde_bindir}/kanagram
-%{_kde_configdir}/kanagram.knsrc
+%{_sysconfdir}/xdg/kanagram.knsrc
 %{_kde_datadir}/appdata/kanagram.appdata.xml
 %{_kde_datadir}/config.kcfg/kanagram.kcfg
 %{_kde_iconsdir}/*/*/apps/kanagram*
