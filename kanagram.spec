@@ -2,7 +2,7 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	14.12.2
+Version:	15.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
