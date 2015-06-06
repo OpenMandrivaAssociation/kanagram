@@ -7,7 +7,8 @@ Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kanagram
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(KF5DocTools)
 BuildRequires:  cmake(KF5KIO)
 BuildRequires:  cmake(KF5ConfigWidgets)
@@ -34,7 +35,7 @@ Kanagram's KNewStuff download service.
 %files
 %doc ChangeLog TODO COPYING COPYING.DOC
 %doc %{_kde_docdir}/HTML/en/kanagram
-%{_datadir}/applications/kanagram.desktop
+%{_datadir}/applications/org.kde.kanagram.desktop
 %{_datadir}/kanagram
 %{_kde_bindir}/kanagram
 %{_sysconfdir}/xdg/kanagram.knsrc
@@ -46,11 +47,11 @@ Kanagram's KNewStuff download service.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde4
-%make
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
