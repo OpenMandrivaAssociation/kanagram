@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kanagram-15.08.0.tar.xz: e69a232547ccb95670f9f2e032f511d777a1f673
+sources:
+  kanagram-15.08.1.tar.xz: 5a4af1a504eb18d6a5c4dab85a633b28ec606285
