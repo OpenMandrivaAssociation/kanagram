@@ -41,7 +41,7 @@ Kanagram's KNewStuff download service.
 %{_datadir}/kanagram
 %{_kde_bindir}/kanagram
 %{_sysconfdir}/xdg/kanagram.knsrc
-%{_kde_datadir}/appdata/kanagram.appdata.xml
+%{_kde_datadir}/appdata/org.kde.kanagram.appdata.xml
 %{_kde_datadir}/config.kcfg/kanagram.kcfg
 %{_kde_iconsdir}/*/*/apps/kanagram*
 
