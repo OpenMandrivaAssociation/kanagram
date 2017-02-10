@@ -38,11 +38,11 @@ Kanagram's KNewStuff download service.
 %doc %{_kde_docdir}/HTML/en/kanagram
 %{_datadir}/applications/org.kde.kanagram.desktop
 %{_datadir}/kanagram
-%{_kde_bindir}/kanagram
+%{_bindir}/kanagram
 %{_sysconfdir}/xdg/kanagram.knsrc
-%{_kde_datadir}/appdata/org.kde.kanagram.appdata.xml
-%{_kde_datadir}/config.kcfg/kanagram.kcfg
-%{_kde_iconsdir}/*/*/apps/kanagram*
+%{_datadir}/metainfo/org.kde.kanagram.appdata.xml
+%{_datadir}/config.kcfg/kanagram.kcfg
+%{_iconsdir}/*/*/apps/kanagram*
 
 #----------------------------------------------------------------------
 
