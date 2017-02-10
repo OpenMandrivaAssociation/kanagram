@@ -2,7 +2,7 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	16.08.3
+Version:	16.12.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -19,7 +19,6 @@ BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(Phonon4Qt5)
-BuildRequires:	cmake(LibKdeEdu)
 BuildRequires:	cmake(LibKEduVocDocument)
 BuildRequires:	cmake(Qt5OpenGL)
 BuildRequires:	pkgconfig(Qt5TextToSpeech)
