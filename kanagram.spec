@@ -2,7 +2,7 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -33,9 +33,8 @@ feature which reveals the original word. Kanagram also has a vocabulary
 editor, so you can make your own vocabularies, and distribute them through
 Kanagram's KNewStuff download service.
 
-%files
+%files -f kanagram.lang
 %doc ChangeLog TODO COPYING COPYING.DOC
-%doc %{_kde_docdir}/HTML/en/kanagram
 %{_datadir}/applications/org.kde.kanagram.desktop
 %{_datadir}/kanagram
 %{_bindir}/kanagram
@@ -43,6 +42,15 @@ Kanagram's KNewStuff download service.
 %{_datadir}/metainfo/org.kde.kanagram.appdata.xml
 %{_datadir}/config.kcfg/kanagram.kcfg
 %{_iconsdir}/*/*/apps/kanagram*
+%doc %{_kde_docdir}/HTML/en/kanagram
+%lang(ca) %doc %{_kde_docdir}/HTML/ca/kanagram
+%lang(de) %doc %{_kde_docdir}/HTML/de/kanagram
+%lang(et) %doc %{_kde_docdir}/HTML/et/kanagram
+%lang(it) %doc %{_kde_docdir}/HTML/it/kanagram
+%lang(nl) %doc %{_kde_docdir}/HTML/nl/kanagram
+%lang(pt_BR) %doc %{_kde_docdir}/HTML/pt_BR/kanagram
+%lang(sv) %doc %{_kde_docdir}/HTML/sv/kanagram
+%lang(uk) %doc %{_kde_docdir}/HTML/uk/kanagram
 
 #----------------------------------------------------------------------
 
@@ -55,4 +63,4 @@ Kanagram's KNewStuff download service.
 
 %install
 %ninja_install -C build
-
+%find_lang kanagram
