@@ -42,15 +42,15 @@ Kanagram's KNewStuff download service.
 %{_datadir}/metainfo/org.kde.kanagram.appdata.xml
 %{_datadir}/config.kcfg/kanagram.kcfg
 %{_iconsdir}/*/*/apps/kanagram*
-%doc %{_kde_docdir}/HTML/en/kanagram
-%lang(ca) %doc %{_kde_docdir}/HTML/ca/kanagram
-%lang(de) %doc %{_kde_docdir}/HTML/de/kanagram
-%lang(et) %doc %{_kde_docdir}/HTML/et/kanagram
-%lang(it) %doc %{_kde_docdir}/HTML/it/kanagram
-%lang(nl) %doc %{_kde_docdir}/HTML/nl/kanagram
-%lang(pt_BR) %doc %{_kde_docdir}/HTML/pt_BR/kanagram
-%lang(sv) %doc %{_kde_docdir}/HTML/sv/kanagram
-%lang(uk) %doc %{_kde_docdir}/HTML/uk/kanagram
+%doc %{_docdir}/HTML/en/kanagram
+%lang(ca) %doc %{_docdir}/HTML/ca/kanagram
+%lang(de) %doc %{_docdir}/HTML/de/kanagram
+%lang(et) %doc %{_docdir}/HTML/et/kanagram
+%lang(it) %doc %{_docdir}/HTML/it/kanagram
+%lang(nl) %doc %{_docdir}/HTML/nl/kanagram
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kanagram
+%lang(sv) %doc %{_docdir}/HTML/sv/kanagram
+%lang(uk) %doc %{_docdir}/HTML/uk/kanagram
 
 #----------------------------------------------------------------------
 
