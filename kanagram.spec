@@ -2,7 +2,7 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	17.04.3
+Version:	17.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -42,15 +42,6 @@ Kanagram's KNewStuff download service.
 %{_datadir}/metainfo/org.kde.kanagram.appdata.xml
 %{_datadir}/config.kcfg/kanagram.kcfg
 %{_iconsdir}/*/*/apps/kanagram*
-%doc %{_docdir}/HTML/en/kanagram
-%lang(ca) %doc %{_docdir}/HTML/ca/kanagram
-%lang(de) %doc %{_docdir}/HTML/de/kanagram
-%lang(et) %doc %{_docdir}/HTML/et/kanagram
-%lang(it) %doc %{_docdir}/HTML/it/kanagram
-%lang(nl) %doc %{_docdir}/HTML/nl/kanagram
-%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kanagram
-%lang(sv) %doc %{_docdir}/HTML/sv/kanagram
-%lang(uk) %doc %{_docdir}/HTML/uk/kanagram
 
 #----------------------------------------------------------------------
 
@@ -63,4 +54,4 @@ Kanagram's KNewStuff download service.
 
 %install
 %ninja_install -C build
-%find_lang kanagram
+%find_lang kanagram --with-html
