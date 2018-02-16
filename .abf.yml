@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kanagram-17.12.1.tar.xz: 399063842cc2dde02cac92be8cc9337d0b531ab2
+sources:
+  kanagram-17.12.2.tar.xz: 21dadf936d877ef17a0d6f62ed482872077cc17c
