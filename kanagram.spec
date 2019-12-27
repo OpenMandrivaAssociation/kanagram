@@ -2,12 +2,12 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kanagram
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(KF5DocTools)
 BuildRequires:  cmake(KF5KIO)
@@ -55,3 +55,6 @@ Kanagram's KNewStuff download service.
 %install
 %ninja_install -C build
 %find_lang kanagram --with-html
+
+# FIXME workaround for gdb 8.3.1 hang
+strip --strip-unneeded %{buildroot}%{_bindir}/kanagram
