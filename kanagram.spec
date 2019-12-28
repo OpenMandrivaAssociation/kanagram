@@ -55,6 +55,3 @@ Kanagram's KNewStuff download service.
 %install
 %ninja_install -C build
 %find_lang kanagram --with-html
-
-# FIXME workaround for gdb 8.3.1 hang
-strip --strip-unneeded %{buildroot}%{_bindir}/kanagram
