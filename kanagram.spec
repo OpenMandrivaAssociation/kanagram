@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kanagram
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kanagram-20.03.90-qt-5.15.patch
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(KF5DocTools)
 BuildRequires:  cmake(KF5KIO)
@@ -46,7 +47,7 @@ Kanagram's KNewStuff download service.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build

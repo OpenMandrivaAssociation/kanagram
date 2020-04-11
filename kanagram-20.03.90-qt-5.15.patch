@@ -1,0 +1,15 @@
+diff -up kanagram-20.03.90/src/mainsettings.cpp.omv~ kanagram-20.03.90/src/mainsettings.cpp
+--- kanagram-20.03.90/src/mainsettings.cpp.omv~	2020-04-12 00:20:35.061697554 +0200
++++ kanagram-20.03.90/src/mainsettings.cpp	2020-04-12 00:20:40.172762636 +0200
+@@ -50,11 +50,7 @@ MainSettings::MainSettings(QWidget *pare
+     languageComboBox->setCurrentIndex(languageComboBox->findText(languageLocale.nativeLanguageName()));
+ 
+     // Connect after we set the current language from settings.
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+     connect(languageComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &MainSettings::widgetModified);
+-#else
+-    connect(languageComboBox, static_cast<void (QComboBox::*)(int, const QString &)>(&QComboBox::currentIndexChanged) , this, &MainSettings::widgetModified);
+-#endif
+ 
+ #ifndef HAVE_SPEECH
+     kcfg_enablePronunciation->hide();
