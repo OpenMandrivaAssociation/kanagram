@@ -2,7 +2,7 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -38,9 +38,9 @@ Kanagram's KNewStuff download service.
 %{_datadir}/applications/org.kde.kanagram.desktop
 %{_datadir}/kanagram
 %{_bindir}/kanagram
-%{_sysconfdir}/xdg/kanagram.knsrc
 %{_datadir}/metainfo/org.kde.kanagram.appdata.xml
 %{_datadir}/config.kcfg/kanagram.kcfg
+%{_datadir}/knsrcfiles/kanagram.knsrc
 %{_iconsdir}/*/*/apps/kanagram*
 
 #----------------------------------------------------------------------
