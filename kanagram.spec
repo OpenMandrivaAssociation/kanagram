@@ -19,7 +19,7 @@ BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	cmake(KF5Crash)
 BuildRequires:	cmake(Phonon4Qt5)
-BuildRequires:	cmake(LibKEduVocDocument)
+BuildRequires:	cmake(LibKEduVocDocument) < 24.0.0
 BuildRequires:	cmake(Qt5OpenGL)
 BuildRequires:	pkgconfig(Qt5TextToSpeech)
 Obsoletes:	%{_lib}kanagramengine4 < 4.14
