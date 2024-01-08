@@ -2,7 +2,7 @@
 
 Summary:	Word learning program
 Name:		plasma6-kanagram
-Version:	24.01.80
+Version:	24.01.85
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -20,11 +20,9 @@ BuildRequires:	cmake(KF6NewStuff)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(Phonon4Qt6)
-BuildRequires:	cmake(LibKEduVocDocument)
+BuildRequires:	%{mklibname -d KEduVocDocument6}
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	pkgconfig(Qt6TextToSpeech)
-Obsoletes:	%{_lib}kanagramengine4 < 4.14
-Obsoletes:	kanagram-devel < 4.14
 
 %description
 Kanagram is a replacement for KMessedWords. Kanagram mixes up the letters
