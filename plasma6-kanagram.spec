@@ -9,7 +9,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/kanagram
+Url:		https://edu.kde.org/kanagram
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/education/kanagram/-/archive/%{gitbranch}/kanagram-%{gitbranchd}.tar.bz2#/kanagram-%{git}.tar.bz2
 %else
