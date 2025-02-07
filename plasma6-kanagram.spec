@@ -5,7 +5,7 @@
 
 Summary:	Word learning program
 Name:		plasma6-kanagram
-Version:	24.12.1
+Version:	24.12.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
