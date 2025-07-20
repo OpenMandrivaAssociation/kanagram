@@ -5,7 +5,7 @@
 
 Summary:	Word learning program
 Name:		kanagram
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -31,6 +31,11 @@ BuildRequires:	%{mklibname -d KEduVocDocument6}
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	pkgconfig(Qt6TextToSpeech)
 
+%rename plasma6-kanagram
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Kanagram is a replacement for KMessedWords. Kanagram mixes up the letters
 of a word (creating an anagram), and you have to guess what the mixed up
@@ -48,19 +53,3 @@ Kanagram's KNewStuff download service.
 %{_datadir}/config.kcfg/kanagram.kcfg
 %{_datadir}/knsrcfiles/kanagram.knsrc
 %{_iconsdir}/*/*/apps/kanagram*
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kanagram-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kanagram --with-html
